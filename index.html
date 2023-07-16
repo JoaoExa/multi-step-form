@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Frontend Mentor | Multi-step form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/images/favicon-32x32.png" type="image/x-icon">
+</head>
+
+<body>
+    <main id="main">
+        <section class="etapas">
+            <div class="etapa">
+                <div class="indicador etapaDestaque" id="indicador1">1</div>
+                <div class="info">
+                    <p>Passo 1</p>
+                    <p><strong>SUAS INFORMAÇÕES</strong></p>
+                </div>
+            </div>
+            <div class="etapa">
+                <div class="indicador" id="indicador2">2</div>
+                <div class="info">
+                    <p>Passo 2</p>
+                    <p><strong>SELECIONE O PLANO</strong></p>
+                </div>
+            </div>
+            <div class="etapa">
+                <div class="indicador" id="indicador3">3</div>
+                <div class="info">
+                    <p>Passo 3</p>
+                    <p><strong>COMPLEMENTOS</strong></p>
+                </div>
+            </div>
+            <div class="etapa">
+                <div class="indicador" id="indicador4">4</div>
+                <div class="info">
+                    <p>Passo 4</p>
+                    <p><strong>RESUMO</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="divisor">
+            <section class="formularios" id="campoformulario">
+                <div id="etapa1">
+                    <h1>Informações pessoais</h1>
+                    <p>Por favor, Informe seu nome, endereço de email, e número de telefone.<label for=""></label></p>
+                    <form id="form1">
+                        <p>
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" class="inputbox" placeholder="e.g. Ryan Gosling">
+                        </p>
+                        <p>
+                            <label for="e-mail">Endereço de email</label>
+                            <input type="email" id="e-mail" class="inputbox" placeholder="e.g. ryangosling@lorem.com">
+                        </p>
+                        <p>
+                            <label for="telefone">Número de telefone</label>
+                            <input type="number" id="telefone" class="inputbox" placeholder="e.g. +1 234 567 890">
+                        </p>
+                    </form>
+                </div>
+                <div id="etapa2" class="displaynone">
+                    <h1>Selecione seu plano</h1>
+                    <p>Você tem a opção de cobrança mensal ou anual.</p>
+                    <div class="gridcontainer">
+                        <div class="card" id="Arcade">
+                            <img src="assets/images/icon-arcade.png" alt="">
+                            <div class="priceinfo">
+                                <p>Arcade</p>
+                                <p class="valor">$9/mês</p>
+                                <p class="mesesgratis displaynone">2 meses gratis</p>
+                            </div>
+                        </div>
+                        <div class="card" id="Avançado">
+                            <img src="assets/images/icon-advanced.png" alt="">
+                            <div class="priceinfo">
+                                <p>Avançado</p>
+                                <p class="valor">$12/mês</p>
+                                <p class="mesesgratis displaynone">2 meses gratis</p>
+                            </div>
+                        </div>
+                        <div class="card" id="Pro">
+                            <img src="assets/images/icon-pro.png" alt="">
+                            <div class="priceinfo">
+                                <p>Pro</p>
+                                <p class="valor">$15/mês</p>
+                                <p class="mesesgratis displaynone">2 meses gratis</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p id="planoerro"></p>
+                    <div class="togglecontainer">
+                        <p id="planomensal">Mensal</p>
+                        <div id="toggle">
+                            <div id="bolatoggle"></div>
+                        </div>
+                        <p class="planoanual">Anual</p>
+                    </div>
+                </div>
+                <div id="etapa3" class="displaynone">
+                    <h1>Escolha complementos</h1>
+                    <p>Complementos ajudam a melhorar a sua experiência de jogo.</p>
+                    <div class="gridcontainer">
+                        <label for="serviços" class="card" id="complemento1">
+                            <input type="checkbox" name="" id="serviços">
+                            <div class="complementosinfo">
+                                <p>Serviço on-line</p>
+                                <p class="complementodescrição">Acesso a jogos multiplayer</p>
+                            </div>
+                            <p class="complementovalor">+$1/mês</p>
+                        </label>
+                        <label for="armazenamento" class="card" id="complemento2">
+                            <input type="checkbox" name="" id="armazenamento">
+                            <div class="complementosinfo">
+                                <p>Armazenamento maior</p>
+                                <p class="complementodescrição">1 TB extra de armazenamento na nuvem</p>
+                            </div>
+                            <p class="complementovalor">+$2/mês</p>
+                        </label>
+                        <label for="perfil" class="card" id="complemento3">
+                            <input type="checkbox" name="" id="perfil">    
+                            <div class="complementosinfo">
+                                <p>Perfil personalizável</p>
+                                <p class="complementodescrição">Tema personalizado em seu perfil</p>
+                            </div>
+                            <p class="complementovalor">+$2/mês</p>
+                        </label>
+                    </div>
+                </div>
+                <div id="etapa4" class="displaynone">
+                    <h1>Finalizando</h1>
+                    <p>Verifique novamente se tudo está OK antes de confirmar.</p>
+                    <div class="complementosfinais">
+                        <div class="containerplanofinal">
+                            <div class="planodisplay">
+                                <p id="planofinal">holder (Mensal)</p>
+                                <p id="planofinalpreço">$/mês</p>
+                            </div>
+                            <button id="mudarplano">mudar</button>
+                        </div>
+                        <div class="containercomplementos displaynone">
+                            <div class="displaycomplementos displaynone" id="containerserviço">
+                                <p>Serviço on-line</p>
+                                <p id="preçoserviço">+$1/mês</p>
+                            </div>
+                            <div class="displaycomplementos displaynone" id="containerarmazenamento">
+                                <p>Armazenamento maior</p>
+                                <p id="preçoarmazenamento">+$2/mês</p>
+                            </div>
+                            <div class="displaycomplementos displaynone" id="containerperfil">
+                                <p>Perfil personalizável</p>
+                                <p id="preçoperfil">+$2/mês</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="total">
+                        <p>Total(por <span id="totalportempo">mês</span>)</p>
+                        <p id="preçototal">$20/mês</p>
+                    </div>
+                </div>
+                <div id="etapa5" class="displaynone">
+                    <img src="assets/images/icon-obrigado.png" alt="">
+                    <h1>Obrigado!</h1>
+                    <p>Obrigado por confirmar sua inscrição! Esperamos que você se divirta usando nossa plataforma. Se você precisar de suporte, sinta-se à vontade para nos enviar um e-mail em support@loremgaming.com.</p>
+                </div>
+            </section>
+            <div class="containerBackNext" id="containerBackNext">
+                <input class="displaynone" type="button" value="Voltar" id="back">
+                <input type="button" value="Próximo" id="next">
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

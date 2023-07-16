@@ -1,0 +1,514 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "Ubuntu";
+    src: url(assets/fonts/Ubuntu-Regular.ttf) format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Ubuntu";
+    src: url(assets/fonts/Ubuntu-Medium.ttf) format("truetype");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Ubuntu";
+    src: url(assets/fonts/Ubuntu-Bold.ttf) format("truetype");
+    font-weight: bold;
+}
+
+:root {
+    --corfundo: #F0F6FF;
+    --corpasso: #BFE2FD;
+    --corinput: #E8F0FE;
+    --corletrapasso: #D6D9E6;
+    --corletraazul: #02295A;
+    --corletracinza: #B1D7FF;
+    --corinputhover: #ADBEFF;
+    --corproximohover: #473DFF;
+    --cinzainput: #757575;
+    --cinzaletra: #9699AB;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--corfundo);
+    font-family: "Ubuntu";
+}
+
+main {
+    margin: auto;
+    width: 100%;
+    background-color: var(--corfundo);
+}
+
+.etapas {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    height: 190px;
+    background-color: var(--corproximohover);
+    padding-top: 30px;
+    color: var(--corletrapasso);
+    background-image: url();
+}
+
+.etapaDestaque {
+    background-color: var(--corpasso);
+    color: #02295A;
+}
+
+section.etapas strong {
+    color: white;
+}
+
+.etapa {
+    display: flex;
+}
+
+.info {
+    display: none;
+    flex-direction: column;
+    margin-left: 15px;
+    gap: 2px;
+}
+
+.indicador {
+    border: solid 1px var(--corletrapasso);
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.9em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#divisor {
+    display: flex;
+    flex-direction: column;
+}
+
+.formularios {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 95%;
+    height: 395px;
+    margin-top: -70px;
+    margin-bottom: 75px;
+    border-radius: 10px;
+    padding: 20px 15px;
+}
+
+
+#etapa1 {
+    color: #02295A;
+    margin-bottom: 94px;
+}
+
+#etapa1 h1 {
+    font-size: 2em;
+    padding-bottom: 5px;
+}
+
+#etapa1 > p {
+    color: var(--cinzaletra);
+    padding-bottom: 30px;
+}
+
+#form1 {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+#form1 > p {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#form1 label {
+    font-weight: 500;
+}
+
+.inputbox {
+    width: 100%;
+    height: 43px;
+    border: solid 2px rgb(175, 175, 175);
+    border-radius: 5px;
+    padding-left: 10px;
+    color: #02295A;
+    font-weight: 500;
+    font-size: 1.1em;
+    font-family: "Ubuntu";
+}
+
+.inputbox::placeholder {
+    color: var(--cinzainput);
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+#etapa2, #etapa3, #etapa4 {
+    color: var(--corletraazul);
+}
+
+#etapa2 > h1, #etapa3 > h1, #etapa4 > h1 {
+    font-size: 2em;
+    padding: 0 0 5px;
+}
+
+#etapa2 > p:nth-child(2), #etapa3 > p:nth-child(2), #etapa4 > p {
+    color: var(--cinzaletra);
+    padding: 0 0 30px;
+}
+
+.gridcontainer {
+    display: grid;
+    grid-auto-rows: 1fr;
+    gap: 20px;
+    height: 290px;
+    margin-bottom: 34px;
+}
+
+.gridcontainer > label{
+    height: 90px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    border-radius: 10px;
+    border: solid 2px var(--corletrapasso);
+    padding: 10px;
+}
+
+.card p:first-child {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.card:hover {
+    border: solid 2px #ADBEFF;
+    cursor: pointer;
+}
+
+.card input {
+    width: 18px;
+    height: 18px;
+}
+
+.card img {
+    align-self: flex-start;
+    width: 45px;
+}
+
+.priceinfo, .complementosinfo  p:first-child {
+    margin-bottom: 2px;
+}
+
+.valor, .complementodescrição {
+    color: #a3a3a3;
+    font-weight: 500;
+    font-size: 0.95em;
+}
+
+.complementovalor {
+    margin-left: auto;
+    color: #a3a3a3;
+}
+
+.mesesgratis {
+    padding-top: 5px;
+    font-size: 13px;
+}
+
+.planoselecionado {
+    border: solid 2px #ADBEFF;
+    background-color: var(--corfundo);
+}
+
+.justifycontentend {
+    justify-content: end;
+}
+
+#planoerro {
+    color: rgba(255, 0, 0, 0.753);
+    font-weight: bold;
+    height: 18px;
+    width: max-content;
+    margin: 0 auto 5px;
+}
+
+.togglecontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--corfundo);
+    height: 50px;
+    font-weight: bold;
+}
+
+#toggle {
+    display: flex;
+    align-items: center;
+    width: 40px;
+    height: 20px;
+    margin: 0 12px;
+    background-color: var(--corletraazul);
+    border-radius: 10px;
+}
+
+#bolatoggle {
+    background-color: white;
+    width: 15px;
+    height: 15px;
+    margin: 0 2px;
+    border-radius: 50%;
+}
+
+#bolatoggle:hover {
+    cursor: pointer;
+}
+
+.planoanual {
+    color: #022a5a75;
+}
+
+.complementosfinais {
+    background-color: var(--corfundo);
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.containerplanofinal {
+    padding: 10px 0 20px;
+}
+
+/* adicionar quando tiver no minimo 1 complemento
+    border-bottom: solid 1px var(--cinzaletra);
+*/
+
+.planodisplay {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 0px 5px;
+}
+
+#mudarplano {
+    border: none;
+    background-color: transparent;
+    color: var(--cinzaletra);
+    font-size: 1.1em;
+    text-decoration: underline;
+}
+
+#mudarplano:hover {
+    color: #473DFF;
+    cursor: pointer;
+}
+
+#planofinal, #planofinalpreço {
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.containercomplementos {
+    border-top: solid 1px var(--cinzaletra);
+    padding: 25px 0px 0px;
+}
+
+.displaycomplementos {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    font-size: 1.1em;
+}
+
+.displaycomplementos p {
+    font-weight: 500;
+}
+
+.displaycomplementos p:nth-child(1) {
+    color: var(--cinzaletra);
+} 
+
+#total {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-size: 1.1em;
+}
+
+#total p:first-child {
+    color: var(--cinzaletra);
+}
+
+#total p:last-child {
+    color: #473DFF;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+#etapa5 {
+    padding-top: 40px;
+    height: 100%;
+}
+
+#etapa5 > img {
+    height: 100px;
+    width: 100px;
+    display: block;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+#etapa5 > h1 {
+    width: min-content;
+    margin: auto;
+    color: var(--corletraazul);
+    padding-bottom: 10px;
+}
+
+#etapa5 > p {
+    max-width: 500px;
+    text-align: center;
+    margin: auto;
+    color: var(--cinzaletra);
+}
+
+.containerBackNext {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    width: 100%;
+    height: 67px;
+}
+
+#back {
+    border: none;
+    color: var(--cinzaletra);
+    height: fit-content;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+#back:hover {
+    color: #02295A;
+}
+
+#next {
+    margin-left: auto;
+    background-color: #02295A;
+    color: white;
+    padding: 10px;
+    margin-top: auto;
+    height: 38px;
+    width: 102px;
+    font-size: 0.9em;
+    border-radius: 6px;
+    border: none;
+    font-weight: bold;
+}
+
+#next:hover {
+    background-color: #473DFF;
+    cursor: pointer;
+}
+
+.displaynone {
+    display: none !important;
+}
+
+@media screen and (min-width: 520px) {
+    
+}
+
+@media screen and (max-width: 768px) {
+    .containerBackNext {
+        background-color: white;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    main {
+        display: flex;
+        justify-content: left;
+        gap: 25px;
+        height: 600px;
+        padding: 15px 40px 15px 15px;
+        margin-top: 28px;
+        max-width: 1050px;
+        background-color: white;
+    }
+
+    .etapas {
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-shrink: 0;
+        gap: 30px;
+        border-radius: 10px;
+        width: 290px;
+        height: 100%;
+        padding-left: 20px;
+    }
+
+    .info {
+        display: flex !important;
+        flex-direction: column;
+        margin-left: 15px;
+        gap: 2px;
+    }
+
+    .formularios {
+        padding: 25px 0px 0px 0px!important;
+        margin: 0 !important;
+        border-radius: 10px;
+        height: 100% !important;
+        width: 100%;
+    }
+
+    .gridcontainer > label{
+        height: 75px;
+    }
+
+    #etapa5 { 
+        padding-top: 120px;
+    }
+
+    .containerBackNext {
+        padding: 0px;
+        height: 38px;
+        margin-top: auto;
+        margin-bottom: 0px;
+    }
+
+    #divisor {
+        flex-grow: 1;
+    }
+}
+
+@media screen and (min-width: 920px) {
+    main {
+        gap: 100px;
+    }
+
+}
